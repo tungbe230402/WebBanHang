@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.ShoppingCartItem>
+@using WebBanHangOnline.Common
+
+@if (Model != null && Model.Any())
+{
+    <h3>
+        GIỎ HÀNG THANH TOÁN
+        <span style="float:right;">
+            <small><small>@Model.Count() sản phẩm</small></small>
+        </span>
+    </h3>
+    var i = 0;
+    var tongtien = decimal.Zero;
+    var tongsoluong = decimal.Zero;
+    <div style="border:2px solid #000000;">
+        <table class="table">
+            <tr class="text-nowrap">
+                <th width="20px">STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                tongtien += item.TotalPrice;
+                tongsoluong += item.Quantity;
+                <tr>
+                    <td class="text-center">@(i+1)</td>
+                    <td>@item.ProductName</td>
+                    <td class="text-center">@item.Quantity</td>
+                    <td>@Common.FormatNumber(item.Price, 0)</td>
+                </tr>
+                i++;
+            }
+            <tr>                
+                <th></th>
+                <th class="text-nowrap">Tổng số lượng sản phẩm</th>
+                <th></th>
+                <th>@tongsoluong</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Tổng tiền</th>
+                <th></th>
+                <th>@Common.FormatNumber(tongtien, 0)</th>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+
+}

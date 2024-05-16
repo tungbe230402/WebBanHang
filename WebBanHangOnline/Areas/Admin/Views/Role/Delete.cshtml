@@ -1,0 +1,28 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Xoá quyền";
+}
+
+<div>
+    <h4>Bạn có chắc chắn muốn xoá quyền này?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên quyền:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-danger" /> |
+            @Html.ActionLink("Hủy", "Index")
+        </div>
+    }
+</div>
