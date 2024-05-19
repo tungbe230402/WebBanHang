@@ -53,6 +53,35 @@ namespace WebBanHangOnline.Controllers
         }
 
         //
+        // Account/Profile
+        public async Task<ActionResult> ProFile()
+        {
+            var user = await UserManager.FindByNameAsync(User.Identity.Name);
+            var item = new CreateAccountViewModel();
+            item.Email = user.Email;
+            item.FullName = user.FullName;
+            item.Phone = user.Phone;
+            item.UserName = user.UserName;
+            return View(item);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> PostProfile(CreateAccountViewModel req)
+        {
+            var user = await UserManager.FindByNameAsync(req.UserName);
+            user.FullName = req.FullName;
+            user.Phone = req.Phone;
+            user.Email = req.Email;
+            var rs = await UserManager.UpdateAsync(user);
+            if (rs.Succeeded)
+            {
+                return RedirectToAction("ProFile");
+            }
+            return View(req);
+        }
+
+        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)

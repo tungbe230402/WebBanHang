@@ -3494,6 +3494,7 @@
     <Content Include="Views\Posts\Detail.cshtml" />
     <Content Include="Views\Advs\Index.cshtml" />
     <Content Include="Views\Advs\Detail.cshtml" />
+    <Content Include="Views\Account\ProFile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

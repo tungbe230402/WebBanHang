@@ -2,6 +2,16 @@
 @{
     ViewBag.Title = "Cập nhật tài khoản";
 }
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+<style>
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        background-color: #ffffff; /* Màu nền */
+        color: #000000; /* Màu chữ */
+        font-weight: bold; /* Đậm */
+    }
+</style>
 
 @section naviheader{
     <!-- Left navbar links -->
@@ -49,7 +59,7 @@
                 </div>
                 <div class="form-group">
                     <label>Quyền</label>
-                    @Html.DropDownListFor(x => x.Roles, ViewBag.Role as SelectList, "- Chọn quyền -", new { @class = "form-control", @checked = "selected" })
+                    @Html.DropDownListFor(x => x.Roles, ViewBag.Role as SelectList, new { @class = "form-control", id = "selectRoles" })
                 </div>
 
                 <div class="form-group">
@@ -68,3 +78,13 @@
 
 </section>
 <!-- /.content -->
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#selectRoles').select2({
+                multiple: true // Cho phép chọn nhiều mục
+            });
+        });
+    </script>
+}
