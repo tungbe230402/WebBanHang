@@ -38,6 +38,8 @@ namespace WebBanHangOnline.Controllers
         public ActionResult Detail(string alias, int id)
         {
             var item = db.Products.Find(id);
+            var countReview = db.Reviews.Where(x => x.ProductId == id).Count();
+            ViewBag.CountReview = countReview;
             return View(item);
         }
 

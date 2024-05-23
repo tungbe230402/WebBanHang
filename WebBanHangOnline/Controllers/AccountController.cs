@@ -58,10 +58,10 @@ namespace WebBanHangOnline.Controllers
         {
             var user = await UserManager.FindByNameAsync(User.Identity.Name);
             var item = new CreateAccountViewModel();
-            item.Email = user.Email;
+            item.UserName = user.UserName;           
             item.FullName = user.FullName;
             item.Phone = user.Phone;
-            item.UserName = user.UserName;
+            item.Email = user.Email;
             return View(item);
         }
 

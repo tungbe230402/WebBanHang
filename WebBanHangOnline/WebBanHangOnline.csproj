@@ -202,6 +202,7 @@
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -282,6 +283,14 @@
     <Compile Include="Migrations\202405161432472_UpdateComebackProducts.designer.cs">
       <DependentUpon>202405161432472_UpdateComebackProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405201052064_tb_Review.cs" />
+    <Compile Include="Migrations\202405201052064_tb_Review.designer.cs">
+      <DependentUpon>202405201052064_tb_Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405201057089_tb_review_update_foreignKey.cs" />
+    <Compile Include="Migrations\202405201057089_tb_review_update_foreignKey.designer.cs">
+      <DependentUpon>202405201057089_tb_review_update_foreignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -297,6 +306,7 @@
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
+    <Compile Include="Models\EF\ReviewProduct.cs" />
     <Compile Include="Models\EF\Subscribe.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -3495,6 +3505,8 @@
     <Content Include="Views\Advs\Index.cshtml" />
     <Content Include="Views\Advs\Detail.cshtml" />
     <Content Include="Views\Account\ProFile.cshtml" />
+    <Content Include="Views\Review\_Review.cshtml" />
+    <Content Include="Views\Review\Load_Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3587,6 +3599,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405161432472_UpdateComebackProducts.resx">
       <DependentUpon>202405161432472_UpdateComebackProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405201052064_tb_Review.resx">
+      <DependentUpon>202405201052064_tb_Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405201057089_tb_review_update_foreignKey.resx">
+      <DependentUpon>202405201057089_tb_review_update_foreignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

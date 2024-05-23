@@ -132,3 +132,5 @@ C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBan
 C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.Migrations.UpdateAdvs1.resources
 C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.Migrations.UpdateProduct1.resources
 C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.Migrations.UpdateComebackProducts.resources
+C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.Migrations.tb_Review.resources
+C:\Users\DELL\Desktop\demoWeb\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.Migrations.tb_review_update_foreignKey.resources
